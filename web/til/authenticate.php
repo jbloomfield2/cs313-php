@@ -3,7 +3,6 @@ require ("db.php");
 $user = htmlspecialchars($_POST["username"]);
 $pass = htmlspecialchars($_POST["pass"]);
 
-
 $getuser = $db->query('SELECT * FROM userdata WHERE username=\'' . $user . '\'');
 $result = $getuser->fetchAll(PDO::FETCH_ASSOC);
 
