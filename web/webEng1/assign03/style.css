@@ -1,0 +1,60 @@
+html {
+    background: #98a8ce;
+    padding: 50px;
+}
+body{
+    border-style: double;
+    max-width: 1280px;
+    margin: auto;
+    background-color: azure;
+}
+header {
+    background: #08738e;
+    border-style:outset;
+    border-color:cadetblue;
+    border-width:medium;
+}
+.image {
+margin: auto;
+}
+h1{
+    padding: 20px;
+    text-align: center;
+}
+p{
+    background-color:beige;
+    border-style: groove;
+    overflow: auto;
+}
+p.services {
+    background-image:linear-gradient(45deg, azure, cadetblue);
+}
+table {
+    border-style: solid;
+    background-color:antiquewhite;
+    border-bottom-color: black;
+    border-width: 5px;
+    text-align: center;
+}
+th {
+    border-style: solid;
+    border-color: aquamarine;
+    border-width: 5px;
+    padding: 48px;
+    text-align: center;
+}
+td {
+    border-style: solid;
+    border-color: cadetblue;
+    border-width: 5px;
+    text-align: center;
+}
+h2 {
+    padding-left: 24px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+#hr{
+    border-style: dashed;
+    border-width: thick;
+}

@@ -1,0 +1,5 @@
+{"perftype":"solo","fname":"Jacob","lname":"Bloomfield","idnum":"1412","skill":"beginner","instrument":"piano","location":"smith","room":"201","time":"9:30","dfname":"","dlname":"","didnum":""}
+{"perftype":"duet","fname":"Jane","lname":"Doe","idnum":"123","skill":"beginner","instrument":"string","location":"smith","room":"301","time":"9:30","dfname":"John","dlname":"Doe","didnum":"124"}
+{"perftype":"solo","fname":"Kelly ","lname":"Smith","idnum":"30303032","skill":"intermediate","instrument":"voice","location":"Snow","room":"210","time":"9:30","dfname":"","dlname":"","didnum":""}
+{"perftype":"solo","fname":"James","lname":"Anderson","idnum":"33304440","skill":"pre-advanced","instrument":"organ","location":"SNow","room":"214","time":"9:45","dfname":"","dlname":"","didnum":""}
+{"perftype":"duet","fname":"Andy","lname":"Smith","idnum":"3334","skill":"intermediate","instrument":"piano","location":"Snow","room":"215","time":"11:00","dfname":"Annie","dlname":"Smith","didnum":"4455"}

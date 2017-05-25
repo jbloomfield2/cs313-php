@@ -1,0 +1,75 @@
+html {
+    background: linear-gradient(skyblue, azure);
+}
+
+body {
+    max-width: 1024px;
+    margin:auto; 
+    background: linear-gradient(skyblue, azure);
+
+}
+
+form {
+      background-color: azure;
+      border-color: burlywood;
+      border-width: 8px;
+      border-style: dashed;
+      border-radius: 20px;
+
+}
+
+h1 {
+    padding: 20px;
+    font-family: "georgia", sans-serif;
+    font-size: 48px;
+    text-align: center;
+
+}
+
+form {
+    padding: 20px;
+
+}
+
+img { 
+    margin: auto
+
+}
+
+table {
+    border-style:double;
+
+}
+
+th {
+    border-style: double;
+
+}
+
+td {
+    border-style:hidden;
+    padding:20px;
+
+}
+
+label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 400px;
+    text-align: right;
+}
+
+input {
+    display: inline-block;
+    float: left;
+}
+
+textarea {
+    display: inline-block;
+    float: left;
+}
+
+output {
+    background-color:azure
+}

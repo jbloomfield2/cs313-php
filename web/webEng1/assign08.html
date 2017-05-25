@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ajax test page</title>
+<style>
+	body{
+		background-color: wheat;
+		text-align: center;
+	}
+	h2{
+		color: green;
+		font-size: 32px;
+	}
+</style>
+</head>
+<body>
+
+<div>
+	<h2>The World's largest cities</h2>
+	<form onchange = "selCountry()">
+		<input type = "radio" name= "country" value = "Mexico">Mexico<br>
+		<input type = "radio" name= "country" value = "USA">USA<br>
+		<input type = "radio" name= "country" value = "Canada">Canada<br>
+		<input type = "radio" name= "country" value = "Russia">Russia<br>
+	</form>
+	<p  id = "cities" style = "white-space: pre-wrap;">
+	</p>
+</div>
+
+<div>
+<h2>Parsing Json</h2>
+<p>Enter the URL to a Json file</p>
+<input type = "text" id= "url" value = "http://157.201.194.254/~ercanbracks/json.txt"><br><br>
+<input type = "button" value = "request" onclick = "jsonRequest()">
+<p id = "pJson"></p>
+</div>
+
+<script>
+function selCountry() 
+{
+	var country = document.getElementsByName('country');
+    if (country[0].checked)
+        httpRequest("http://157.201.194.254/~ercanbracks/mexico.txt");
+    if (country[1].checked)
+        httpRequest("http://157.201.194.254/~ercanbracks/usa.txt");
+	if (country[2].checked)
+        httpRequest("http://157.201.194.254/~ercanbracks/canada.txt");
+	if (country[3].checked)
+        httpRequest("http://157.201.194.254/~ercanbracks/russia.txt");
+}
+
+function httpRequest(url) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("cities").innerHTML =
+      this.responseText;
+    }
+  }; 
+  xhttp.open("GET",url , true);
+  xhttp.send();
+}
+
+function jsonRequest() {
+	var url = document.getElementById("url").value;
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+	  displayjSon(myObj);
+    }
+  };
+  xhttp.open("GET",url , true);
+  xhttp.send();
+}
+
+function displayjSon(myObj)
+{
+var name = "";
+var addr = "";
+var gpa = "";
+var major = "";
+document.getElementById("pJson").innerHTML = "<ul>"
+	for (i in myObj.students)
+	{
+		name = myObj.students[i].first;
+		name += " " + myObj.students[i].last;
+		addr = myObj.students[i].address.city;
+		addr += ", " + myObj.students[i].address.state;
+		addr += " " + myObj.students[i].address.zip;
+		gpa = myObj.students[i].gpa;
+		major = myObj.students[i].major;
+		
+		document.getElementById("pJson").innerHTML +=
+			"<li>" + name + "<br>" + addr + "<br> <b>Major: </b>" +
+			major + "<br> <b>GPA</b>: " + gpa + "<br><br>";
+
+	}
+	document.getElementById("pJson").innerHTML += "</ul>"
+}
+</script>
+
+</body>
+</html>

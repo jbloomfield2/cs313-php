@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculate a mortgage</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function loadFocus()
+    {
+        document.getElementById("apr").focus();
+    }
+    
+        function validate()
+        {
+            var aprVal = document.loan.apr.value;
+            var termVal = document.loan.term.value;
+            var amountVal = document.loan.amount.value;
+            
+            if(isNaN(aprVal) || aprVal == "")
+                {
+                    alert("please enter a valid value for APR Ex: 3.5")
+                    document.getElementById("apr").focus();
+                    return;
+                }
+            
+            else if (isNaN(termVal) || termVal == "")
+                {
+                    alert("please enter a valid value for Loan Term")
+                    document.getElementById("term").focus();
+                    return;
+                }
+            else if (isNaN(amountVal) || amountVal == "")
+                {
+                    alert("please enter a value for Loan Amount")
+                    document.getElementById("amount").focus();
+                    return;
+                }
+            calc();
+        }
+        
+        function calc()
+        {            
+            var aprVal = document.loan.apr.value;
+            var termVal = document.loan.term.value;
+            var amountVal = document.loan.amount.value;
+            
+            var rate = parseFloat(aprVal / 1200);
+            var periods = termVal * 12;
+            var calc1 = (amountVal * rate);
+            var calc2 = (rate + 1);
+            var calc3 = 1 - Math.pow(calc2, -periods);
+            var pmt = calc1 / calc3;
+            document.getElementById("payment").value = pmt.toFixed(2);
+        }
+        
+    </script>
+<body onload="loadFocus();">
+    
+    <h1>Loan Calculator</h1><br>
+    <div style="text-align: center;"><img src="calc.png"></div>
+    
+    <form name="loan" onreset="loadFocus()">
+        <p>Use this calculator to estimate mothly payments for a loan.<br>
+        enter your desired values and click calculate to find your payment.<br>
+        please use only numerical values.</p>
+        APR:<br><input type="text" id="apr"/>%<br>
+        Loan term (years):<br><input id="term" type="text"/><br>
+        Loan Amount:<br><input id="amount" type="text"/><br>
+        Monthly Payment:<br><input id="payment" type="text" readonly/><br><br>
+        <input type="reset">
+        <input value="calculate" type="button" onclick="validate();">
+        
+    </form>
+    </body>
+</head>

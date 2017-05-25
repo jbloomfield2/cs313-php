@@ -1,0 +1,23 @@
+html {background-color: aquamarine}
+
+body {max-width: 1024px; 
+      margin:auto; 
+      background-color: cadetblue;
+	  border-radius: 20px;
+     }
+
+form {
+      background-color: crimson;
+      border-color: black;
+      border-width: 8px;
+      border-style: dashed;
+      border-radius: 20px;}
+
+h1 {padding: 20px;
+    font-family: "georgia", sans-serif;
+    font-size: 48px;
+    text-align: center;}
+
+form {padding: 20px;}
+
+img { margin: auto}

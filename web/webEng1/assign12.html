@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register for the Piano festival</title>
+<style>
+	h2{
+	font-family: "stencil", serif;}
+	body
+	{
+	max-height: 1080px;
+	background: coral;
+	}
+	
+	form {
+	padding: 25px;
+	background-color:wheat;
+	border-color: black;
+	border-width: 3px;
+	border-style: dashed;
+	}
+	
+	table{
+	margin-top: 50px;
+	background-color: bisque;
+	border-style: double;
+	border-width: 3px;}
+	
+	th{
+	padding: 5px;
+	background-color: white;
+	}
+	td{
+		border-top-style: solid;
+		border-right-style: dashed;
+		border-width: 1px;}
+	}
+</style>
+</head>
+<body onload = "getStudents()">
+	<h2>Piano Festival Registration</h2>
+	<form>
+	welcome. Enter your details below to register!<br><br>
+	<div style="color:red;" id = "error"></div>
+	Performance type:
+	<select id="perftype" onchange = "checkDuet()">
+		<option value = "solo">Solo</option>
+		<option value = "duet">Duet</option>
+		<option value = "concerto">Concerto</option>
+	</select><br><br>
+	First Name:<input id = "fname" type = "text"><br><br>
+	Last Name:<input id = "lname" type = "text"><br><br>
+	Student id:<input id = "idnum" type = "text"><br><br>
+	
+	<div id = "duetform" style = "display:none; margin-left: 30px;">
+		Please enter the details for the second student:<br><br>
+		First Name:<input id = "dfname" type = "text"><br><br>
+		Last Name:<input id = "dlname" type = "text"><br><br>
+		Student id:<input id = "didnum" type = "text"><br><br>
+	</div>
+	Skill Level:
+	<select id = "skill"><br><br>
+	<option value = "beginner">beginner</option>
+	<option value = "intermediate">intermediate</option>
+	<option value = "pre-advanced">pre-advanced</option>
+	<option value = "advanced">advanced</option>
+	</select><br><br>
+	
+	Instrument:
+	<select id = "instrument">
+	<option value = "piano">piano</option>
+	<option value = "voice">voice</option>
+	<option value = "string">string</option>
+	<option value = "organ">organ</option>
+	<option value = "other">other</option>
+	</select><br><br>
+	Location:<input type = "text" id = "location"><br><br>
+	Room #:<input type = "text" id = "room"><br><br>
+	Time slot:
+	<select id = "time">
+	<option value = "9:00">9:00</option>
+	<option value = "9:15">9:15</option>
+	<option value = "9:30">9:30</option>
+	<option value = "9:45">9:45</option>
+	<option value = "10:00">10:00</option>
+	<option value = "10:15">10:15</option>
+	<option value = "10:30">10:30</option>
+	<option value = "10:45">10:45</option>
+	<option value = "11:00">11:00</option>
+	</select><br><br>
+	
+	<input type = "reset" value = "clear"><input type = "button" value = "register" onclick = "validate()">
+	</form>
+	<h2>Registered Performers:</h2>
+	<div id = "table"><div>
+	<script>
+		function checkDuet()
+		{
+			var perf = document.getElementById("perftype");
+			if (perf.value == "duet")
+				document.getElementById("duetform").style.display = 'block';
+			else
+				document.getElementById("duetform").style.display = 'none';
+		}
+		
+		function validate()
+		{
+		document.getElementById("error").innerHTML = "";
+			var type = document.getElementById("perftype");
+			var fname = document.getElementById("fname");
+			var lname = document.getElementById("lname");
+			var idnum = document.getElementById("idnum");
+			var loc = document.getElementById("location");
+			var room = document.getElementById("room");
+			var time = document.getElementById("time");
+			
+			var dfname = document.getElementById("dfname");
+			var dlname = document.getElementById("dlname");
+			var didnum = document.getElementById("didnum");
+			
+			if (fname.value == "" || lname.value == "" || idnum.value == ""
+				|| loc.value == "" || room.value == "" || time.value == "")
+				document.getElementById("error").innerHTML = "Please fill in all fields before registering";
+			else if (type.value == "duet")
+			{
+			if (dfname.value == "" || dlname.value == "" || didnum.value == "")
+					document.getElementById("error").innerHTML = "Please fill in all fields before registering";
+			else
+				buildString();
+				
+			}	
+			else
+				buildString();
+		}
+		
+		function buildString()
+		{
+			var type = document.getElementById("perftype").value;
+			var fname = document.getElementById("fname").value;
+			var lname = document.getElementById("lname").value;
+			var idnum = document.getElementById("idnum").value;
+			var skill = document.getElementById("skill").value;
+			var instr = document.getElementById("instrument").value;
+			var loc = document.getElementById("location").value;
+			var room = document.getElementById("room").value;
+			var time = document.getElementById("time").value;
+			
+			var dfname = document.getElementById("dfname").value;
+			var dlname = document.getElementById("dlname").value;
+			var didnum = document.getElementById("didnum").value;
+			
+			var query = "?perftype="+type+"&fname="+fname+"&lname="+lname+"&idnum="+idnum+"&skill="+skill+
+			"&instrument="+instr+"&location="+loc+"&room="+room+"&time="+time+"&dfname="+dfname+"&dlname="+dlname+"&didnum="+didnum;
+			
+			httpRequest("/~jbloomfield2/assign12.php"+query);
+		}
+		
+		function httpRequest(url)
+		{
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() 
+			 {
+			   if (this.readyState == 4 && this.status == 200) 
+			   {
+				 alert("student added");
+				 getStudents();
+			   }
+			 }; 
+			 xhttp.open("GET",url , true);
+			 xhttp.send();
+			  
+		}
+		
+		function getStudents()
+		{
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() 
+			 {
+			   if (this.readyState == 4 && this.status == 200) 
+			   {
+				 var data = this.responseText;
+				 displayStudents(data);
+			   }
+			 }; 
+			 xhttp.open("GET","piano.txt" , true);
+			 xhttp.send();
+		}
+		
+		function displayStudents(data)
+		{
+			var studentlist = data.split("\n");
+		
+			var table;
+			
+			table = "<table><tr><th>Performance Type</th><th>First Name</th>"
+			+ "<th>Last Name</th><th>Student Id#</th><th>Skill Level</th><th>Instrument</th>"
+			+ "<th>Location</th><th>Room</th><th>Time</th><th>Partner First Name</th><th>Partner Last Name</th><th>Partner Id#</th></tr>";
+			for(var i = 0; i < studentlist.length - 1; i ++)
+			{
+				var student = JSON.parse(studentlist[i]);
+				if (student.dfname == "")
+					student.dfname = "N/A";
+				if (student.dlname == "")
+					student.dlname = "N/A";
+				if (student.didnum == "")
+					student.didnum = "N/A";
+				table += "<tr><td>"+student.perftype+"</td><td>"+student.fname+"</td><td>"+student.lname
+				+"</td><td>"+student.idnum+"</td><td>"+student.skill+"</td><td>"+student.instrument+"</td><td>"
+				+student.location+"</td><td>"+student.room+"</td><td>"+student.time+"</td><td>"+student.dfname
+				+"</td><td>"+student.dlname+"</td><td>"+student.didnum+"</td></tr>";
+				
+			}
+			document.getElementById("table").innerHTML = table;
+		}
+	</script>
+</body>
+</html>

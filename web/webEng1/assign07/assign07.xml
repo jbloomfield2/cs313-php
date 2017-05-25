@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="assign07.xsl"?>
+<!DOCTYPE bsa SYSTEM "bsa.dtd">
+<bsa>
+	<council name="Golden Empire">
+		<troop troopnum="817" unitname="Auburn 1st">
+			
+			<scout>
+			<fname>Jacob</fname>
+			<lname>Bloomfield</lname>
+			<phone>530-823-8834</phone>
+			<addr>
+				<street>207 Swenson ct</street>
+				<city>Auburn</city>
+				<state>CA</state>
+			</addr>
+			</scout>
+			
+			<scout>
+				<fname>Erwin</fname>
+				<lname>Lane</lname>
+				<phone>530-842-2282</phone>
+				<addr>
+					<street>210 Landis Cir</street>
+					<city>Auburn</city>
+					<state>CA</state>
+				</addr>
+				<rank date-earned="12-01-2009">tenderfoot</rank>
+				<mbadge date-earned="12-01-2009">First Aid</mbadge>
+				<mbadge date-earned="12-01-2009">Citizenship in the Community</mbadge>
+			</scout>
+			
+			<scout>
+				<fname>Edward</fname>
+				<lname>Young</lname>
+				<phone>530-392-8457</phone>
+				<addr>
+					<street>860 Red Hawk Ln</street>
+					<city>Auburn</city>
+					<state>CA</state>
+				</addr>
+				<rank date-earned="07-05-2011">tenderfoot</rank>
+				<rank date-earned="09-12-2011">second class</rank>
+				<mbadge date-earned="07-05-2011">First Aid</mbadge>
+				<mbadge date-earned="09-12-2011">Citizenship in the Community</mbadge>
+			</scout>
+			
+			<scout>
+				<fname>Frank</fname>
+				<lname>Godfrey</lname>
+				<phone>916-245-1258</phone>
+				<addr>
+					<street>143 Aeolia Dr</street>
+					<city>Foresthill</city>
+					<state>CA</state>
+				</addr>
+				<rank date-earned="02-12-2015">tenderfoot</rank>
+				<rank date-earned="04-15-2015">second class</rank>
+				<rank date-earned="08-21-2015">first class</rank>
+				<rank date-earned="01-03-2016">star</rank>
+				<mbadge date-earned="02-12-2015">Camping</mbadge>
+				<mbadge date-earned="02-12-2015">Cooking</mbadge>
+				<mbadge date-earned="02-12-2015">Leatherwork</mbadge>
+				<mbadge date-earned="04-15-2015">Swimming</mbadge>
+				<mbadge date-earned="05-15-2015">Emergency preparedness</mbadge>
+				<mbadge date-earned="05-24-2015">Geology</mbadge>
+				<mbadge date-earned="08-21-2015">Art</mbadge>
+				<mbadge date-earned="08-21-2015">Environmental Science</mbadge>
+				<mbadge date-earned="01-03-2015">Citizenship in the Community</mbadge>
+				<mbadge date-earned="01-03-2015">First Aid</mbadge>
+			</scout>
+						
+			<scout>
+				<fname>Zach</fname>
+				<lname>Mason</lname>
+				<phone>530-888-2242</phone>
+				<addr>
+					<street>306 Incline Dr</street>
+					<city>Auburn</city>
+					<state>CA</state>
+				</addr>
+				<mbadge date-earned="02-12-2015">Camping</mbadge>
+				<mbadge date-earned="02-12-2015">Pioneering</mbadge>
+				<mbadge date-earned="02-12-2015">Leatherwork</mbadge>
+				<mbadge date-earned="04-15-2015">Aviation</mbadge>
+				<mbadge date-earned="05-15-2015">Emergency preparedness</mbadge>
+				<mbadge date-earned="05-24-2015">Space exploration</mbadge>
+				<mbadge date-earned="08-21-2015">Art</mbadge>
+				<mbadge date-earned="08-21-2015">Environmental Science</mbadge>
+				<mbadge date-earned="01-03-2015">Citizenship in the Community</mbadge>
+				<mbadge date-earned="01-03-2015">Basketry</mbadge>
+			</scout>
+			
+			
+		</troop>
+		
+		<troop troopnum="287" unitname="auburn 3rd">
+			<scout>
+				<fname>James</fname>
+				<lname>Machado</lname>
+				<phone>530-881-9254</phone>
+				<addr>
+					<street>531 Orange st</street>
+					<city>Auburn</city>
+					<state>CA</state>
+				</addr>
+				<rank date-earned="11-04-2009">tenderfoot</rank>
+				<rank date-earned="12-01-2010">second class</rank>
+			</scout>
+			
+			<scout>
+				<fname>Dwight</fname>
+				<lname>Ortega</lname>
+				<phone>530-241-1573</phone>
+				<addr>
+					<street>211 Palm Ave</street>
+					<city>Auburn</city>
+					<state>CA</state>
+				</addr>
+				<rank date-earned="12-01-2009">tenderfoot</rank>
+				<rank date-earned="02-01-2010">second class</rank>
+				<rank date-earned="04-07-2010">first class</rank>
+				<mbadge date-earned="04-12-2015">Camping</mbadge>
+				<mbadge date-earned="04-16-2015">Swimming</mbadge>
+				<mbadge date-earned="04-21-2015">Animation</mbadge>
+				<mbadge date-earned="05-15-2015">Archery</mbadge>
+				<mbadge date-earned="05-15-2015">Emergency preparedness</mbadge>
+				<mbadge date-earned="06-24-2015">Electronics</mbadge>
+				<mbadge date-earned="08-21-2015">Art</mbadge>
+				<mbadge date-earned="08-21-2016">Engineering</mbadge>
+				<mbadge date-earned="01-03-2016">Lifesaving</mbadge>
+				<mbadge date-earned="01-03-2016">First Aid</mbadge>
+			</scout>
+				
+			<scout>
+				<fname>Chris</fname>
+				<lname>Heffernan</lname>
+				<phone>530-814-1453</phone>
+				<addr>
+					<street>153 Chana Dr</street>
+					<city>Auburn</city>
+					<state>CA</state>
+				</addr>
+				<mbadge date-earned="01-12-2012">Camping</mbadge>
+				<mbadge date-earned="02-16-2012">Medicine</mbadge>
+				<mbadge date-earned="02-12-2012">Leatherwork</mbadge>
+				<mbadge date-earned="05-14-2012">Swimming</mbadge>
+				<mbadge date-earned="05-15-2013">Music</mbadge>
+				<mbadge date-earned="05-24-2013">Geology</mbadge>
+				<mbadge date-earned="08-26-2013">Radio</mbadge>
+				<mbadge date-earned="08-21-2014">Small Boat Sailing</mbadge>
+				<mbadge date-earned="01-03-2015">Citizenship in the Community</mbadge>
+				<mbadge date-earned="05-03-2015">Skating</mbadge>
+			</scout>
+			
+			<scout>
+				<fname>Tyler</fname>
+				<lname>Odem</lname>
+				<phone>530-368-2598</phone>
+				<addr>
+					<street>94 Fulweiler Ave</street>
+					<city>Auburn</city>
+					<state>CA</state>
+				</addr>
+				<rank date-earned="10-21-2009">tenderfoot</rank>
+				<rank date-earned="11-11-2010">second class</rank>
+				<rank date-earned="04-07-2011">first class</rank>
+			</scout>
+			
+			<scout>
+				<fname>Jim</fname>
+				<lname>Hattrup</lname>
+				<phone>530-295-2957</phone>
+				<addr>
+					<street>321 Sutter St</street>
+					<city>Auburn</city>
+					<state>CA</state>
+				</addr>
+			</scout>
+						
+			<scout>
+				<fname>Gerald</fname>
+				<lname>Charles</lname>
+				<phone>530-295-1580</phone>
+				<addr>
+					<street>210 Garfield st</street>
+					<city>Auburn</city>
+					<state>CA</state>
+				</addr>
+				<rank date-earned="12-03-2011">tenderfoot</rank>
+			</scout>
+		</troop>
+	</council>
+	
+	<council name="National Council">
+		<troop troopnum="107" unitname="8th National">
+			<scout>
+				<fname>Frank</fname>
+				<lname>Rose</lname>
+				<phone>321-984-4702</phone>
+				<addr>
+					<street>52059 Monterey St</street>
+					<city>Palm Bay</city>
+					<state>FL</state>
+				</addr>
+				<mbadge date-earned="02-21-2015">Theater</mbadge>
+				<mbadge date-earned="02-24-2015">Cooking</mbadge>
+				<mbadge date-earned="02-25-2015">Leatherwork</mbadge>
+				<mbadge date-earned="04-12-2015">Sports</mbadge>
+				<mbadge date-earned="05-06-2015">Emergency preparedness</mbadge>
+				<mbadge date-earned="05-03-2015">Welding</mbadge>
+				<mbadge date-earned="08-23-2015">Art</mbadge>
+				<mbadge date-earned="08-11-2015">Pioneering</mbadge>
+				<mbadge date-earned="01-23-2015">Wilderness Survival</mbadge>
+				<mbadge date-earned="01-05-2015">First Aid</mbadge>
+			</scout>
+			
+			<scout>
+				<fname>Wayne</fname>
+				<lname>Lee</lname>
+				<phone>805-317-4140</phone>
+				<addr>
+					<street>36645 Fremont Ter</street>
+					<city>Bakersfield</city>
+					<state>CA</state>
+				</addr>
+			</scout>
+			
+			<scout>
+				<fname>Steven</fname>
+				<lname>Sanders</lname>
+				<phone>480-144-2026</phone>
+				<addr>
+					<street>25348 Hazelcrest Cir</street>
+					<city>Scottsdale</city>
+					<state>AZ</state>
+				</addr>
+				<rank date-earned="12-01-2009">tenderfoot</rank>
+				<rank date-earned="02-01-2010">second class</rank>
+				<rank date-earned="04-07-2010">first class</rank>
+				<rank date-earned="03-08-2011">star</rank>
+				<rank date-earned="06-21-2011">life</rank>
+				<rank date-earned="02-17-2012">eagle</rank>
+			</scout>
+			
+			<scout>
+				<fname>Gerald</fname>
+				<lname>Parker</lname>
+				<phone>217-433-7558</phone>
+				<addr>
+					<street>2724 Messerschmidt Pkwy</street>
+					<city>Springfield</city>
+					<state>IL</state>
+				</addr>
+				<rank date-earned="12-12-2007">tenderfoot</rank>
+				<rank date-earned="08-16-2010">second class</rank>
+			</scout>
+						
+			<scout>
+				<fname>Howard</fname>
+				<lname>Chavez</lname>
+				<phone>304-421-3887</phone>
+				<addr>
+					<street>4 Norway Maple Pt</street>
+					<city>Huntington</city>
+					<state>WV</state>
+				</addr>
+				<mbadge date-earned="02-12-2015">Camping</mbadge>
+				<mbadge date-earned="02-12-2015">Pets</mbadge>
+				<mbadge date-earned="02-12-2015">Leatherwork</mbadge>
+				<mbadge date-earned="04-15-2015">Nature</mbadge>
+				<mbadge date-earned="05-15-2015">Emergency preparedness</mbadge>
+				<mbadge date-earned="05-24-2015">Railroading</mbadge>
+				<mbadge date-earned="08-21-2015">Pottery</mbadge>
+				<mbadge date-earned="08-21-2015">Environmental Science</mbadge>
+				<mbadge date-earned="01-03-2015">Citizenship in the World</mbadge>
+				<mbadge date-earned="01-03-2015">First Aid</mbadge>
+			</scout>
+			
+		</troop>
+		<troop troopnum="241" unitname="32nd National">
+			<scout>
+				<fname>Jeffrey</fname>
+				<lname>Henry</lname>
+				<phone>757-932-1131</phone>
+				<addr>
+					<street>9 Sauthoff Trail</street>
+					<city>Norfolk</city>
+					<state>VA</state>
+				</addr>
+			</scout>
+			
+			<scout>
+				<fname>Robert</fname>
+				<lname>West</lname>
+				<phone>408-924-3901</phone>
+				<addr>
+					<street>4 Lunder Hill</street>
+					<city>San Jose</city>
+					<state>CA</state>
+				</addr>
+				<rank date-earned="12-11-2009">tenderfoot</rank>
+				<rank date-earned="05-31-2010">second class</rank>
+				<rank date-earned="08-27-2010">first class</rank>
+			</scout>
+			
+			<scout>
+				<fname>Victor</fname>
+				<lname>Lawson</lname>
+				<phone>773-876-7161</phone>
+				<addr>
+					<street>60 Mccormick Hill</street>
+					<city>Chicago</city>
+					<state>IL</state>
+				</addr>
+				<mbadge date-earned="02-12-2015">Plant Science</mbadge>
+				<mbadge date-earned="02-12-2015">Cooking</mbadge>
+				<mbadge date-earned="02-12-2015">Painting</mbadge>
+				<mbadge date-earned="04-15-2015">Swimming</mbadge>
+				<mbadge date-earned="05-15-2015">Emergency preparedness</mbadge>
+				<mbadge date-earned="05-24-2015">Personal Fitness</mbadge>
+				<mbadge date-earned="08-21-2015">Art</mbadge>
+				<mbadge date-earned="08-21-2015">Environmental Science</mbadge>
+				<mbadge date-earned="01-03-2015">Family Life</mbadge>
+				<mbadge date-earned="01-03-2015">First Aid</mbadge>
+			</scout>
+			
+			<scout>
+				<fname>Joseph</fname>
+				<lname>Carpenter</lname>
+				<phone>865-992-8240</phone>
+				<addr>
+					<street>5041 Golf View Ter</street>
+					<city>Knoxville</city>
+					<state>TN</state>
+				</addr>
+				<mbadge date-earned="05-12-2015">Electricity</mbadge>
+				<mbadge date-earned="05-12-2015">First Aid</mbadge>
+				<mbadge date-earned="05-12-2015">Leatherwork</mbadge>
+				<mbadge date-earned="06-15-2015">Swimming</mbadge>
+				<mbadge date-earned="06-14-2015">Fishing</mbadge>
+				<mbadge date-earned="05-23-2015">Geology</mbadge>
+				<mbadge date-earned="08-27-2015">Gardening</mbadge>
+				<mbadge date-earned="08-27-2015">Environmental Science</mbadge>
+				<mbadge date-earned="03-03-2015">Pioneering</mbadge>
+				<mbadge date-earned="04-03-2015">First Aid</mbadge>
+			</scout>
+			
+			<scout>
+				<fname>Kevin</fname>
+				<lname>Richardson</lname>
+				<phone>979-337-6573</phone>
+				<addr>
+					<street>7 Macpherson Ln</street>
+					<city>Bryan</city>
+					<state>TX</state>
+				</addr>
+				<rank date-earned="01-02-2009">tenderfoot</rank>
+			</scout>
+			
+		</troop>
+	</council>
+</bsa>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title>Place your order</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="assign05.js"></script>
+</head>
+    
+<body onload="loadFocus();">
+    <h1>Order from our best selling Pc componants</h1>
+    <form name="order" onsubmit="return validate()" onreset="loadFocus();">
+        <table>
+            <thead>please make your desired selection: </thead>
+            <tr>
+                <th>CPU</th>
+                <th>keyboard</th>
+                <th>Memory</th>
+                <th>Monitors</th>
+            </tr>
+            <tr>
+                <td><img src="https://images-na.ssl-images-amazon.com/images/I/41kyOSaGrQL.jpg" style="height:160px;"></td>
+                <td><img src="https://images-na.ssl-images-amazon.com/images/I/81wvukMTHKL._SL1500_.jpg" style="height:160px;"></td>
+                <td><img src="https://images-na.ssl-images-amazon.com/images/I/61pfjK4csnL._SL1000_.jpg" style="height:160px;"></td>
+                <td><img src="https://images-na.ssl-images-amazon.com/images/I/31jrx-UBbEL.jpg" style="height:160px;"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="item1" onclick="updateTotal();"/>
+                    Intel Core i5 6600k 3.5 ghz processor <b>$235.99</b></td>
+                <td><input type="checkbox" id="item2" onclick="updateTotal();"/>
+                    Razor Chroma backlit <br /> mechanical keyboard <b>$109.99</b></td>
+                <td><input type="checkbox" id="item3" onclick="updateTotal();"/>
+                    Kingston hyperx 16GB DDR4 ram <b>$79.99</b></td>
+                <td><input type="checkbox" id="item4" onclick="updateTotal();"/>
+                    lg 25' ultrawide monitor <b>$189.99</b></td>
+            </tr>
+
+        </table>
+
+        <p>Please enter your payment information below</p>
+        <p id="error" style="color:red;font-size:16px;"></p>
+        <label id="lFname">First Name:</label> <input type="text" id="fName" /><br /><br />
+        <label id="lLname">Last Name:</label> <input type="text" id="lName" /><br /><br />
+        <label id="lAddr">Address:</label> <textarea id="addr" cols="21"></textarea><br /><br /><br />
+        <label id="lPhone">Phone:</label> <input type="text" id="phone" placeholder="xxx-xxx-xxxx"/><br /><br />
+        <label>subtotal: $</label><output id="total"></output><br /><br />
+        <label id="lCard">Card Type: </label>
+        <label>Visa</label><input type="radio" name="card" value="Visa" /><br />
+        <label>Amex</label><input type="radio" name="card" value="amex"/><br />
+        <label>mastercard</label><input type="radio" name="card" value="mastercard" /><br /><br /><br />
+        <label id="lCardNum">Card#:</label><input type="text" id="cardNum" placeholder="1234567890123456"/><br /><br />
+        <label id="exp">Expiration: month and year</label><input type="text" id="expMo" size="6" placeholder="02"/>
+        <input type="text" size=" 6" id="expYear" placeholder="2017"/><br /><br />
+        <input type="reset" style="margin-left:400px">
+        <input type="submit" style="margin-left:50px"><br /><br />
+        
+    </form>
+    <br /><br />
+</body>

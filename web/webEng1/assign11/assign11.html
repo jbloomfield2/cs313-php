@@ -1,0 +1,134 @@
+<html>
+  <head>
+  <title>Mileage Calculator</title>
+  <style>
+	body 
+	{
+	 max-width: 1024px;
+    margin:auto;
+	background-color: bisque;
+	}
+	
+	form {
+    display: inline-block;
+    width: 400px;
+	margin-top: 100px;
+    text-align: right;
+	}
+	
+	div
+	{
+		width: 300px;
+		background-color: white;
+		border: 4px solid lightblue;
+		display: none;
+		margin-left: 100px;
+	}
+  </style>
+  </head>
+  <body>
+
+  <form>
+  <h2>Trip planner</h2>
+  Enter the start and destination cities to find the distance and possible transit methods<br><br>
+      Start City: 
+      <input type = "text" id = "startCity"><br><Br>
+      Start State: 
+      <input type = "text" id = "startState" placeholder = "XX" maxlength = "2"><br><br>
+      Destination City:
+      <input type = "text" id = "endCity"><br><br>
+      Destination State:
+      <input type = "text" id = "endState" placeholder = "XX" maxlength = "2"><br><br>
+      <button type = "button" onclick = "validate()">Calculate</button>
+	 
+  </form>
+  
+  <script>
+  
+	  function validate()
+	  {
+		var startCity = document.getElementById("startCity").value;
+		var startState = document.getElementById("startState").value;
+		var endCity = document.getElementById("endCity").value;
+		var endState = document.getElementById("endState").value;
+		
+		if (startCity == "")
+		{
+			alert ("please enter a start city");
+			return false;
+		}
+		else if (startState == "" || startState.length != 2)
+		{
+			alert ("please enter a two letter start state code");
+			return false;
+		}
+		else if (endCity == "")
+		{
+			alert ("please enter a end city");
+			return false;
+		}
+		else if (endState == "" || endState.length != 2)
+		{
+			alert ("please enter a two letter end state code");
+		}
+		else
+			getMileage();
+		
+		
+	  }
+      function getMileage()
+      {
+         var query = "?startCity=" +
+         document.getElementById("startCity").value +
+         "&startState=" +
+         document.getElementById("startState").value +
+         "&endCity=" +
+         document.getElementById("endCity").value +
+         "&endState=" +
+         document.getElementById("endState").value;
+         httpRequest("http://157.201.194.254/cgi-bin/ercanbracks/mileage/mileageAjaxXML"+query);
+		 
+         
+      }
+  
+      function httpRequest(url)
+      {
+     var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() 
+     {
+       if (this.readyState == 4 && this.status == 200) 
+       {
+         var xmlResp = this.responseXML;
+		 displayxml(xmlResp);
+       }
+     }; 
+     xhttp.open("GET",url , true);
+     xhttp.send();
+      }
+	  
+	  function displayxml(xml)
+	  {
+		
+		var startcity = xml.getElementsByTagName("startcity")[0].innerHTML;
+		var startstate = xml.getElementsByTagName("startstate")[0].innerHTML;
+		var endcity = xml.getElementsByTagName("endcity")[0].innerHTML;
+		var endstate = xml.getElementsByTagName("endstate")[0].innerHTML;
+		var miles = xml.getElementsByTagName("miles")[0].innerHTML;
+		var tmodes = xml.getElementsByTagName("tmode");
+		var tmode_str = "";
+		for (i = 0; i < tmodes.length; i++)
+		{
+			tmode_str += "<li>" + tmodes[i].innerHTML + "</li>";	
+		}
+		
+		document.getElementById("result").style.display = 'block';
+		document.getElementById("result").innerHTML = "your trip: <br> \tfrom " 
+		+ startcity + ", " + startstate + " to " + endcity + ", " + endstate +
+		"<br> Total distance: " + miles + " miles.<br>" +
+		"available transit options:<br>" + "<ul>" + tmode_str + "</ul>";
+	  }
+  </script>
+  
+  <div id = "result"></div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculate a mortgage</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    function loadFocus()
+    {
+        document.getElementById("apr").focus();
+    }
+    
+        function validate()
+        {
+            var aprVal = document.loan.apr.value;
+            var termVal = document.loan.term.value;
+            var amountVal = document.loan.amount.value;
+            
+            if(isNaN(aprVal) || aprVal == "")
+                {
+                    alert("please enter a valid value for APR Ex: 3.5")
+                    document.getElementById("apr").focus();
+                    return false;
+                }
+            
+            else if (isNaN(termVal) || termVal == "")
+                {
+                    alert("please enter a valid value for Loan Term")
+                    document.getElementById("term").focus();
+                    return false;
+                }
+            else if (isNaN(amountVal) || amountVal == "")
+                {
+                    alert("please enter a value for Loan Amount")
+                    document.getElementById("amount").focus();
+                    return false;
+                }
+			return true;
+        }
+        
+        
+    </script>
+<body onload="loadFocus();">
+    
+    <h1>Loan Calculator</h1><br>
+    <div style="text-align: center;"><img src="calc.png"></div>
+    
+    <form onsubmit = "return validate()" action = "http://157.201.194.254/cgi-bin/blo15016/a.out">
+        APR:<br><input type="text" name = "apr" id="apr"/>%<br>
+        Loan term (years):<br><input name ="term" id="term" type="text"/><br>
+        Loan Amount:<br><input name = "amount" id="amount" type="text"/><br><br>
+		<input type="submit">
+        
+    </form>
+    </body>
+</head>
