@@ -25,7 +25,7 @@ foreach ($db->query('SELECT * FROM post') as $row)
 	$result = $getname->fetchAll(PDO::FETCH_ASSOC);
 	
   echo '<div id="post">' . $row["points"] . ' points<br>';
-  echo '<p id="title"><b>' . $row["title"] . '</b></p>';
+  echo '<p id="title"><b>' . $row["title"] . '</b><br>' . $row["content"] . '</p>';
   echo '<br>submitted by: <b>' . $result[0]["username"] . '</b>';
   echo '</div><br/>';
 }

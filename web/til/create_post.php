@@ -12,11 +12,12 @@ $stmt->bindValue(':uid', $id);
 $stmt->execute();
 $postid = $db->lastInsertId('post_id_seq');
 print ($postid);
-$stmt = $db->prepare('INSERT INTO posthistory(submitted_by, post) VALUES (:uid, :pid)');
+$stmt = $db->prepare('INSERT INTO posthistory(submitted_by, post, points) VALUES (:uid, :pid, 0)');
 $stmt->bindValue(':uid', $id);
 $stmt->bindValue(':pid', $postid);
 $stmt->execute();
 print($id);
 print($title);
 print($content);
+header("Location: tilhome.php")
 ?>
