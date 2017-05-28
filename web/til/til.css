@@ -1,14 +1,36 @@
-#post
-{
-    margin-top: 50px;
-    border-style: double;   
+body {
+    margin: auto;
+    background-color: cornflowerblue;
 }
-#title
-{
+
+#post {
+    max-width: 1024px;
+    margin: auto;
+    margin-top: 50px;
+    border-style: double;
+    background-color: beige;
+}
+
+#title {
     margin-left: 30px;
 }
-#error
+
+a {
+    padding: 15px;
+}
+
+#nav {
+    background-color: bisque;
+    padding: 10px;
+}
+
+textarea {
+    margin-left: 25px;
+  width: 300px;
+  height: 150px;
+}
+
+label
 {
-	color: red;
-	font-weight: bold;
+    float:left;
 }

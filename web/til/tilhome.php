@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="til.css">
-		<title>Today I Learned</title>
-	</head>
+
+<head>
+    <link rel="stylesheet" href="til.css">
+    <title>Today I Learned</title>
+</head>
 
 <?php
-session_start();
 require ("db.php");
 require ("nav.php");
 if (isset($_SESSION["username"]))
 {
 	$user = $_SESSION["username"];
-	print "Wlcome, $user";
+	print "Welcome, $user";
 }
 
 
@@ -30,4 +30,5 @@ foreach ($db->query('SELECT * FROM post') as $row)
   echo '</div><br/>';
 }
 ?>
+
 </html>

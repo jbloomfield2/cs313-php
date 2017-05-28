@@ -11,11 +11,13 @@ if ($user == $result[0]["username"] && $pass == $result[0]["password"])
     session_start();
     header("Location: tilhome.php");
     $_SESSION["username"] = $user;
+    $_SESSION["uid"] = $result[0]["id"];
 }
 else
 {
 	session_start();
 	$_SESSION["fail"] = true;
+    $_SESSION['err'] = 'invalid username or password';
 	header("Location: login.php");
 }
 
