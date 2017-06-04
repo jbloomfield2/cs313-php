@@ -5,8 +5,10 @@ $pass = htmlspecialchars($_POST["pass"]);
 
 $getuser = $db->query('SELECT * FROM userdata WHERE username=\'' . $user . '\'');
 $result = $getuser->fetchAll(PDO::FETCH_ASSOC);
+$verify = password_verify($pass, $result[0]["password"]);
 
-if ($user == $result[0]["username"] && $pass == $result[0]["password"])
+
+if ($user == $result[0]["username"] && $verify == true)
 {
     session_start();
     header("Location: tilhome.php");

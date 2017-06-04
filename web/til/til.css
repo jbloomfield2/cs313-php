@@ -1,14 +1,16 @@
 body {
     margin: auto;
-    background-color: cornflowerblue;
+    background: linear-gradient(to right, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(0,118,237,1) 100%);
 }
 
 #post {
+    padding: 20px;
     max-width: 1024px;
     margin: auto;
     margin-top: 50px;
     border-style: double;
     background-color: beige;
+    border-radius: 15px;
 }
 
 #title {
@@ -18,10 +20,19 @@ body {
 a {
     padding: 15px;
 }
+a:hover {
+    color: chartreuse
+}
+
+#nav:hover {
+    background-color: antiquewhite;
+}
 
 #nav {
     background-color: bisque;
     padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 textarea {
@@ -33,4 +44,16 @@ textarea {
 label
 {
     float:left;
+}
+
+img
+{
+    float:left;
+    padding: 10px;
+    clear:left;
+}
+
+#post:hover
+{
+    background-color: antiquewhite;
 }

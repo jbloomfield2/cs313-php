@@ -4,6 +4,8 @@ session_start();
 
 $newuser = $_POST['newusername'];
 $pass = $_POST['newpass'];
+$hashed = password_hash($pass, PASSWORD_DEFAULT);
+print "$hashed";
 $stmt = $db->prepare('SELECT username FROM userdata WHERE username=:newuser');
 $stmt->bindValue(':newuser', $newuser, PDO::PARAM_STR);
 $stmt->execute();
@@ -19,9 +21,10 @@ else
 {
     $stmt = $db->prepare('INSERT INTO userdata(username, password) VALUES (:user, :pass)');
     $stmt->bindValue(':user', $newuser);
-    $stmt->bindValue(':pass', $pass);
+    $stmt->bindValue(':pass', $hashed);
     $stmt->execute();
     $_SESSION['success'] = true;
     header("Location: login.php");
 }
+
 ?>

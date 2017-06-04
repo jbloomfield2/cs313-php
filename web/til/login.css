@@ -10,9 +10,18 @@ a {
     float: right;
 }
 
+a:hover {
+    color: chartreuse
+}
+
+#nav:hover {
+    background-color: antiquewhite;
+}
+
 body {
-    background-color: cornflowerblue;
+    background: linear-gradient(to right, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(0,118,237,1) 100%);
     margin: auto;
+    overflow: auto;
 }
 
 #nav {
